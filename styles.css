@@ -171,10 +171,23 @@ h1 {
 
 .social:hover,
 .social:focus-visible { color: var(--champagne-bright); transform: translateY(-3px); }
-.instagram:hover i, .instagram:focus-visible i { border-color: rgba(226, 74, 141, .72); }
+.instagram i {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .18);
+  background:
+    radial-gradient(circle at 30% 107%, #feda75 0 15%, #fa7e1e 29%, #d62976 50%, #962fbf 72%, #4f5bd5 100%);
+  box-shadow: 0 9px 25px rgba(214, 41, 118, .25), inset 0 1px rgba(255, 255, 255, .22);
+}
+.telegram i {
+  color: #fff;
+  border-color: rgba(106, 204, 245, .35);
+  background: linear-gradient(145deg, #55c6f3, #229ed9);
+  box-shadow: 0 9px 25px rgba(34, 158, 217, .24), inset 0 1px rgba(255, 255, 255, .22);
+}
+.instagram:hover i, .instagram:focus-visible i { border-color: rgba(255, 255, 255, .5); }
 .tiktok:hover i, .tiktok:focus-visible i { border-color: rgba(37, 244, 238, .58); }
 .snapchat:hover i, .snapchat:focus-visible i { border-color: rgba(255, 237, 73, .68); }
-.telegram:hover i, .telegram:focus-visible i { border-color: rgba(85, 198, 243, .68); }
+.telegram:hover i, .telegram:focus-visible i { border-color: rgba(255, 255, 255, .5); }
 
 .explore-button,
 .exclusive-button {
@@ -254,7 +267,7 @@ h1 {
 .gallery-item:hover img { transform: scale(1.035); filter: saturate(.95); }
 .gallery-item:nth-child(1) img { object-position: 58% 48%; }
 .gallery-item:nth-child(2) img { object-position: 54% 36%; }
-.gallery-item:nth-child(3) img { object-position: 50% 50%; }
+.gallery-item:nth-child(3) img { object-position: 54% 50%; }
 
 .site-footer {
   padding: 28px 0 4px;
@@ -266,12 +279,35 @@ h1 {
 }
 
 .exclusive-page {
-  background:
-    linear-gradient(rgba(6, 7, 7, .64), rgba(6, 7, 7, .82)),
-    url("assets/images/exclusive-new.webp") center 42% / cover fixed;
+  position: relative;
+  overflow-x: hidden;
+  background: #080909;
+}
+
+.exclusive-page::before,
+.exclusive-page::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+}
+
+.exclusive-page::before {
+  z-index: 0;
+  inset: -28px;
+  background: url("assets/images/exclusive-new.webp") center 42% / cover no-repeat;
+  filter: blur(18px) saturate(.72);
+  transform: scale(1.06);
+}
+
+.exclusive-page::after {
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(rgba(8, 9, 9, .56), rgba(8, 9, 9, .78));
 }
 
 .exclusive-shell {
+  position: relative;
+  z-index: 1;
   width: min(100%, 570px);
   min-height: 100vh;
   display: grid;
