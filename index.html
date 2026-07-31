@@ -6,15 +6,18 @@
   <meta name="theme-color" content="#080909">
   <meta name="description" content="Anna Cooper — all my links in one place.">
   <title>Anna Cooper</title>
+  <script>document.documentElement.classList.add("js-enabled");</script>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="image" href="assets/images/photo-1.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=1" defer></script>
 </head>
 <body>
   <main class="page-shell">
     <section class="profile-card" aria-labelledby="profile-name">
       <div class="hero-wrap">
-        <img class="hero" src="assets/images/photo-1.webp" alt="Anna Cooper sitting in a car" width="1086" height="1448">
+        <img class="hero" src="assets/images/photo-1.webp" alt="Anna Cooper sitting in a car" width="1086" height="1448" fetchpriority="high" decoding="async">
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="identity">
           <p class="eyebrow">Private space</p>
@@ -28,9 +31,9 @@
         </div>
       </div>
 
-      <p class="bio">A little more of me, all in one place.</p>
+      <p class="bio" data-reveal>A little more of me, all in one place.</p>
 
-      <nav class="socials" aria-label="Social links">
+      <nav class="socials" aria-label="Social links" data-reveal>
         <a class="social instagram" href="https://www.instagram.com/annacooper.usa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           <span>Instagram</span>
@@ -49,24 +52,24 @@
         </a>
       </nav>
 
-      <a class="explore-button" href="exclusive.html" target="_blank" rel="noopener">
+      <a class="explore-button" href="exclusive.html" target="_blank" rel="noopener" data-reveal>
         <span>Explore more of me</span>
         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </a>
 
-      <div class="gallery-heading" aria-hidden="true">
+      <div class="gallery-heading" aria-hidden="true" data-reveal>
         <span></span>
         <p>View gallery</p>
         <span></span>
       </div>
 
-      <div class="gallery" aria-label="Photo gallery">
+      <div class="gallery" aria-label="Photo gallery" data-reveal>
         <div class="gallery-item"><img src="assets/images/gallery-1.webp" alt="Anna at the beach" width="864" height="1536" loading="lazy"></div>
         <div class="gallery-item"><img src="assets/images/gallery-2.webp" alt="Portrait of Anna" width="1229" height="1536" loading="lazy"></div>
         <div class="gallery-item"><img src="assets/images/gallery-3.webp" alt="Close portrait of Anna" width="1536" height="1536" loading="lazy"></div>
       </div>
 
-      <footer class="site-footer">© Anna · annaco.space</footer>
+      <footer class="site-footer" data-reveal>© Anna · annaco.space</footer>
     </section>
   </main>
 </body>
