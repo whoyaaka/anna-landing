@@ -6,16 +6,19 @@
   <meta name="theme-color" content="#080909">
   <meta name="description" content="Anna Cooper — exclusive link.">
   <title>Anna — My exclusive</title>
+  <script>document.documentElement.classList.add("js-enabled");</script>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="image" href="assets/images/exclusive-new.webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=1" defer></script>
 </head>
 <body class="exclusive-page">
   <main class="exclusive-shell">
     <section class="exclusive-card" aria-labelledby="exclusive-name">
-      <img class="exclusive-photo" src="assets/images/exclusive-new.webp" alt="Anna under palm trees" width="1229" height="1536">
+      <img class="exclusive-photo" src="assets/images/exclusive-new.webp" alt="Anna under palm trees" width="1229" height="1536" fetchpriority="high" decoding="async">
       <div class="exclusive-overlay"></div>
-      <div class="exclusive-content">
+      <div class="exclusive-content" data-reveal>
         <p class="exclusive-kicker">For your eyes only</p>
         <div class="name-row light-name">
           <h1 id="exclusive-name">Anna</h1>
