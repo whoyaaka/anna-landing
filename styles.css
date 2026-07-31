@@ -263,10 +263,14 @@ h1 {
 .instagram i {
   color: #fff;
   font-size: 20px;
-  border-color: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .3);
   background:
     radial-gradient(circle at 30% 107%, #feda75 0 15%, #fa7e1e 29%, #d62976 50%, #962fbf 72%, #4f5bd5 100%);
-  box-shadow: 0 9px 25px rgba(214, 41, 118, .25), inset 0 1px rgba(255, 255, 255, .22);
+  background-clip: padding-box;
+  box-shadow:
+    0 9px 25px rgba(214, 41, 118, .22),
+    0 0 0 1px rgba(255, 255, 255, .055),
+    inset 0 1px rgba(255, 255, 255, .18);
 }
 
 .instagram i::before {
